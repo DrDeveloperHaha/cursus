@@ -1,835 +1,277 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursus Esports | Official Club</title>
-    <!-- Tailwind CSS CDN -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursus Esports | Official Club</title>
+<!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="cursuslogo.jpg"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            black: '#07070a',
-                            dark: '#0e0d14',
-                            card: 'rgba(23, 21, 36, 0.65)',
-                            border: 'rgba(168, 85, 247, 0.2)',
-                            purple: '#a855f7',
-                            neon: '#c084fc',
-                            glow: '#9333ea',
-                            accent: '#e879f9'
-                        }
-                    },
-                    boxShadow: {
-                        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.5)',
-                        'neon-glow': '0 0 45px -10px rgba(192, 132, 252, 0.6)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #07070a;
-        }
-        h1, h2, h3, .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .glass {
-            background: rgba(18, 16, 28, 0.7);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(168, 85, 247, 0.15);
-        }
-        .glass-card {
-            background: rgba(22, 19, 36, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(168, 85, 247, 0.12);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(192, 132, 252, 0.45);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -8px rgba(168, 85, 247, 0.25);
-        }
-        .neon-text-glow {
-            text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
-        }
-    </style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+brand: {
+black: '#07070a',
+dark: '#0e0d14',
+card: 'rgba(23, 21, 36, 0.65)',
+border: 'rgba(168, 85, 247, 0.2)',
+purple: '#a855f7',
+neon: '#c084fc',
+glow: '#9333ea',
+accent: '#e879f9'
+}
+},
+boxShadow: {
+'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.5)',
+'neon-glow': '0 0 45px -10px rgba(192, 132, 252, 0.6)',
+}
+}
+}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+body {
+font-family: 'Inter', sans-serif;
+background-color: #07070a;
+}
+h1, h2, h3, .heading-font {
+font-family: 'Space Grotesk', sans-serif;
+}
+.glass {
+background: rgba(18, 16, 28, 0.7);
+backdrop-filter: blur(14px);
+-webkit-backdrop-filter: blur(14px);
+border: 1px solid rgba(168, 85, 247, 0.15);
+}
+.glass-card {
+background: rgba(22, 19, 36, 0.6);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(168, 85, 247, 0.12);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+border-color: rgba(192, 132, 252, 0.45);
+transform: translateY(-4px);
+box-shadow: 0 12px 30px -8px rgba(168, 85, 247, 0.25);
+}
+.neon-text-glow {
+text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+</style>
 </head>
 <body class="text-zinc-100 min-h-screen flex flex-col antialiased selection:bg-brand-purple selection:text-black">
 
-    <!-- Ambient Neon Background Glows -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-glow/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-0 right-10 w-[500px] h-[300px] bg-brand-purple/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
-
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 glass border-b border-brand-border/40">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="Cursuslogo.jpg" alt="Cursus Logo" class="w-10 h-10 rounded-lg object-cover border border-brand-purple/40 shadow-neon-purple group-hover:scale-105 transition-transform">
-                <span class="heading-font text-2xl font-black tracking-widest text-white uppercase">
-                    CURSUS<span class="text-brand-neon">.</span>
-                </span>
-            </a>
-
-            <!-- Modern Condensed Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-zinc-300">
-                <a href="#about" class="hover:text-brand-neon transition-colors">The Org</a>
-                <a href="#roster" class="hover:text-brand-neon transition-colors">Rosters</a>
-                <a href="#tournaments" class="hover:text-brand-neon transition-colors">Tournaments</a>
-                <a href="#bento" class="hover:text-brand-neon transition-colors">Hub</a>
-            </nav>
-
-            <!-- CTA Buttons -->
-            <div class="flex items-center gap-3">
-                <a href="<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursus Esports | Official Club</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            black: '#07070a',
-                            dark: '#0e0d14',
-                            card: 'rgba(23, 21, 36, 0.65)',
-                            border: 'rgba(168, 85, 247, 0.2)',
-                            purple: '#a855f7',
-                            neon: '#c084fc',
-                            glow: '#9333ea',
-                            accent: '#e879f9'
-                        }
-                    },
-                    boxShadow: {
-                        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.5)',
-                        'neon-glow': '0 0 45px -10px rgba(192, 132, 252, 0.6)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #07070a;
-        }
-        h1, h2, h3, .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .glass {
-            background: rgba(18, 16, 28, 0.7);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(168, 85, 247, 0.15);
-        }
-        .glass-card {
-            background: rgba(22, 19, 36, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(168, 85, 247, 0.12);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(192, 132, 252, 0.45);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -8px rgba(168, 85, 247, 0.25);
-        }
-        .neon-text-glow {
-            text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
-        }
-    </style>
-</head>
-<body class="text-zinc-100 min-h-screen flex flex-col antialiased selection:bg-brand-purple selection:text-black">
-
-    <!-- Ambient Neon Background Glows -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-glow/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-0 right-10 w-[500px] h-[300px] bg-brand-purple/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
-
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 glass border-b border-brand-border/40">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="Cursuslogo.jpg" alt="Cursus Logo" class="w-10 h-10 rounded-lg object-cover border border-brand-purple/40 shadow-neon-purple group-hover:scale-105 transition-transform">
-                <span class="heading-font text-2xl font-black tracking-widest text-white uppercase">
-                    CURSUS<span class="text-brand-neon">.</span>
-                </span>
-            </a>
-
-            <!-- Modern Condensed Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-zinc-300">
-                <a href="#about" class="hover:text-brand-neon transition-colors">The Org</a>
-                <a href="#roster" class="hover:text-brand-neon transition-colors">Rosters</a>
-                <a href="#tournaments" class="hover:text-brand-neon transition-colors">Tournaments</a>
-                <a href="#bento" class="hover:text-brand-neon transition-colors">Hub</a>
-            </nav>
-
-            <!-- CTA Buttons -->
-            <div class="flex items-center gap-3">
-                <a href="<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursus Esports | Official Club</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            black: '#07070a',
-                            dark: '#0e0d14',
-                            card: 'rgba(23, 21, 36, 0.65)',
-                            border: 'rgba(168, 85, 247, 0.2)',
-                            purple: '#a855f7',
-                            neon: '#c084fc',
-                            glow: '#9333ea',
-                            accent: '#e879f9'
-                        }
-                    },
-                    boxShadow: {
-                        'neon-purple': '0 0 25px -5px rgba(168, 85, 247, 0.5)',
-                        'neon-glow': '0 0 45px -10px rgba(192, 132, 252, 0.6)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #07070a;
-        }
-        h1, h2, h3, .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .glass {
-            background: rgba(18, 16, 28, 0.7);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(168, 85, 247, 0.15);
-        }
-        .glass-card {
-            background: rgba(22, 19, 36, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(168, 85, 247, 0.12);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(192, 132, 252, 0.45);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -8px rgba(168, 85, 247, 0.25);
-        }
-        .neon-text-glow {
-            text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
-        }
-    </style>
-</head>
-<body class="text-zinc-100 min-h-screen flex flex-col antialiased selection:bg-brand-purple selection:text-black">
-
-    <!-- Ambient Neon Background Glows -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-glow/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-0 right-10 w-[500px] h-[300px] bg-brand-purple/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
-
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 glass border-b border-brand-border/40">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="Cursuslogo.jpg" alt="Cursus Logo" class="w-10 h-10 rounded-lg object-cover border border-brand-purple/40 shadow-neon-purple group-hover:scale-105 transition-transform">
-                <span class="heading-font text-2xl font-black tracking-widest text-white uppercase">
-                    CURSUS<span class="text-brand-neon">.</span>
-                </span>
-            </a>
-
-            <!-- Modern Condensed Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-zinc-300">
-                <a href="#about" class="hover:text-brand-neon transition-colors">The Org</a>
-                <a href="#roster" class="hover:text-brand-neon transition-colors">Rosters</a>
-                <a href="#tournaments" class="hover:text-brand-neon transition-colors">Tournaments</a>
-                <a href="#bento" class="hover:text-brand-neon transition-colors">Hub</a>
-            </nav>
-
-            <!-- CTA Buttons -->
-            <div class="flex items-center gap-3">
-                <a href="https://discord.gg/bxdzUhWhYX" target="_blank" class="px-5 py-2.5 rounded-lg bg-brand-purple hover:bg-brand-neon text-black font-bold text-xs uppercase tracking-widest transition-all hover:scale-105 shadow-neon-purple flex items-center gap-2">
-                    <span>Join Discord</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main class="flex-grow max-w-7xl mx-auto px-6 w-full py-10 space-y-20">
-
-        <!-- Hero Section -->
-        <section class="relative rounded-3xl overflow-hidden border border-brand-border/40 bg-zinc-950/60 p-8 md:p-14 shadow-2xl">
-            <!-- Background Banner Ambient -->
-            <div class="absolute inset-0 -z-10 opacity-35">
-                <img src="Cursusbanner.jpg" alt="Cursus Banner" class="w-full h-full object-cover object-center filter saturate-150">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-dark/90 to-transparent -z-10"></div>
-
-            <div class="max-w-2xl space-y-6">
-                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-brand-purple/30 bg-brand-purple/10 text-brand-neon text-xs font-bold uppercase tracking-widest">
-                    <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
-                    Multi-Title Esports Org
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight text-white leading-tight">
-                    ADAPT.<br>
-                    EVOLVE.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon via-brand-accent to-purple-400 neon-text-glow">CONQUER.</span>
-                </h1>
-
-                <p class="text-zinc-300 text-base md:text-lg leading-relaxed font-normal">
-                    Dominating <span class="text-white font-semibold">The Finals</span> and invading <span class="text-white font-semibold">Fortnite Chapter 7</span>. Built on raw mechanics, zero ego, and disciplined comms.
-                </p>
-
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#tournaments" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-purple to-brand-glow hover:from-brand-neon hover:to-brand-purple text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
-                        Weekly Cups
-                    </a>
-                    <a href="#roster" class="px-7 py-3.5 rounded-xl glass hover:bg-zinc-800/60 text-white font-bold uppercase tracking-widest text-sm border border-brand-border hover:border-brand-neon/60 transition-all">
-                        Tryouts & Rosters
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bento Grid: Modern High-Impact Hub -->
-        <section id="bento" class="space-y-6">
-            <div class="flex items-end justify-between border-b border-brand-border/40 pb-4">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Organization Hub</span>
-                    <h2 class="text-3xl font-black tracking-wide text-white uppercase">Cursus Operations</h2>
-                </div>
-                <span class="text-xs text-zinc-400 uppercase tracking-widest font-mono">Live Intel</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Bento 1: Weekly Cup Status -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold uppercase tracking-wider text-brand-neon bg-brand-purple/10 px-3 py-1 rounded-full border border-brand-purple/20">Fridays @ 5:00 PM EST</span>
-                            <span class="text-xs text-zinc-400 font-mono">FACEIT / Custom</span>
-                        </div>
-                        <h3 class="text-2xl font-bold uppercase text-white">The Finals Weekly Cup</h3>
-                        <p class="text-zinc-400 text-sm">Competitive cashout brackets for NA and EU rosters. Open entry, streamed live, high-stakes casting.</p>
-                    </div>
-                    <div class="pt-6">
-                        <a href="https://discord.com/bxdzUhWhYX" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Register on Discord <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bento 2: Fortnite Division Recruitment -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden border-brand-purple/30">
-                    <div class="space-y-3 relative z-10">
-                        <span class="text-xs font-bold uppercase tracking-wider text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">Active Recruiting</span>
-                        <h3 class="text-2xl font-bold uppercase text-white">Fortnite Pro Roster</h3>
-                        <p class="text-zinc-400 text-sm">Chapter 7 Duos scouting. Paid contracts, tournament entry funding, and dedicated scrim infrastructure.</p>
-                    </div>
-                    <div class="pt-6 relative z-10">
-                        <a href="https://discord.gg/bxdzUhWhYX" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Submit Tracker Link <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bento 3: Live Broadcast -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-red-400">Stream Schedule</span>
-                        </div>
-                        <h3 class="text-2xl font-bold uppercase text-white">Monday - Friday</h3>
-                        <p class="text-zinc-400 text-sm">Live 3:00 PM – 6:30 PM EST. Ranked Unreal grind, high-level tryout VOD reviews, and tournament casting.</p>
-                    </div>
-                    <div class="pt-6">
-                        <a href="https://twitch.tv/rmghahaha" target="_blank" class="inline-flex items-center text-xs font-bold text-purple-300 hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Watch on Twitch <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rosters Section -->
-        <section id="roster" class="space-y-8">
-            <div class="border-b border-brand-border/40 pb-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Competitive Roster</span>
-                <h2 class="text-3xl font-black tracking-wide text-white uppercase">Active Divisions</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Division: The Finals -->
-                <div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
-                            <h3 class="text-xl font-bold uppercase tracking-wider text-white">The Finals Division</h3>
-                        </div>
-                        <span class="text-xs uppercase font-mono tracking-widest text-zinc-400">NA & EMEA</span>
-                    </div>
-
-                    <div class="space-y-3 font-mono text-sm">
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">NA Core Roster</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Grand Major Series</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">EMEA Squad</span>
-                            <span class="text-xs text-zinc-400 uppercase font-sans font-semibold">LCQ Contenders</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Division: Fortnite -->
-                <div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
-                            <h3 class="text-xl font-bold uppercase tracking-wider text-white">Fortnite Division</h3>
-                        </div>
-                        <span class="text-xs uppercase font-mono tracking-widest text-brand-neon">Trial Phase</span>
-                    </div>
-
-                    <div class="space-y-3 font-mono text-sm">
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">Captain</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Evaluating Interviews</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">Fragger</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Open Tryouts</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Call to Action -->
-        <section class="glass-card rounded-3xl p-12 text-center space-y-6 border-brand-purple/30 bg-gradient-to-b from-brand-dark to-brand-black">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">Join Team Cursus</h2>
-            <p class="text-zinc-400 max-w-xl mx-auto text-base">
-                Whether competing in Weekly Cups, testing for the pro rosters, or repping the tag in the community—it starts in the server.
-            </p>
-            <div class="flex justify-center gap-4 pt-2">
-                <a href="https://discord.gg/bxdzUhWhYX" target="_blank" class="px-8 py-3.5 rounded-xl bg-brand-purple hover:bg-brand-neon text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
-                    Connect on Discord
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-brand-border/30 glass py-8 mt-12 text-center text-zinc-500 text-xs tracking-wider uppercase">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <span>&copy; 2026 CURSUS ESPORTS. All Rights Reserved.</span>
-            <div class="flex gap-6 text-zinc-400">
-                <a href="https://twitter.com/rmghaha" class="hover:text-brand-neon transition-colors">Twitter / X</a>
-                <a href="https://youtube.com/@rmglol" class="hover:text-brand-neon transition-colors">YouTube</a>
-                <a href="https://instagram.com/rmghaha" class="hover:text-brand-neon transition-colors">Instagram</a>
-                <a href="https://twitch.tv/rmghahaha" class="hover:text-brand-neon transition-colors">Twitch</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html> target="_blank" class="px-5 py-2.5 rounded-lg bg-brand-purple hover:bg-brand-neon text-black font-bold text-xs uppercase tracking-widest transition-all hover:scale-105 shadow-neon-purple flex items-center gap-2">
-                    <span>Join Discord</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main class="flex-grow max-w-7xl mx-auto px-6 w-full py-10 space-y-20">
-
-        <!-- Hero Section -->
-        <section class="relative rounded-3xl overflow-hidden border border-brand-border/40 bg-zinc-950/60 p-8 md:p-14 shadow-2xl">
-            <!-- Background Banner Ambient -->
-            <div class="absolute inset-0 -z-10 opacity-35">
-                <img src="Cursusbanner.jpg" alt="Cursus Banner" class="w-full h-full object-cover object-center filter saturate-150">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-dark/90 to-transparent -z-10"></div>
-
-            <div class="max-w-2xl space-y-6">
-                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-brand-purple/30 bg-brand-purple/10 text-brand-neon text-xs font-bold uppercase tracking-widest">
-                    <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
-                    Multi-Title Esports Org
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight text-white leading-tight">
-                    ADAPT.<br>
-                    EVOLVE.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon via-brand-accent to-purple-400 neon-text-glow">CONQUER.</span>
-                </h1>
-
-                <p class="text-zinc-300 text-base md:text-lg leading-relaxed font-normal">
-                    Dominating <span class="text-white font-semibold">The Finals</span> and invading <span class="text-white font-semibold">Fortnite Chapter 7 Season 4</span>. Built on raw mechanics, zero ego, and disciplined comms.
-                </p>
-
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#tournaments" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-purple to-brand-glow hover:from-brand-neon hover:to-brand-purple text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
-                        Weekly Cups
-                    </a>
-                    <a href="#roster" class="px-7 py-3.5 rounded-xl glass hover:bg-zinc-800/60 text-white font-bold uppercase tracking-widest text-sm border border-brand-border hover:border-brand-neon/60 transition-all">
-                        Tryouts & Rosters
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bento Grid: Modern High-Impact Hub -->
-        <section id="bento" class="space-y-6">
-            <div class="flex items-end justify-between border-b border-brand-border/40 pb-4">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Organization Hub</span>
-                    <h2 class="text-3xl font-black tracking-wide text-white uppercase">Cursus Operations</h2>
-                </div>
-                <span class="text-xs text-zinc-400 uppercase tracking-widest font-mono">Live Intel</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Bento 1: Weekly Cup Status -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold uppercase tracking-wider text-brand-neon bg-brand-purple/10 px-3 py-1 rounded-full border border-brand-purple/20">Fridays @ 5:00 PM EST</span>
-                            <span class="text-xs text-zinc-400 font-mono">FACEIT / Custom</span>
-                        </div>
-                        <h3 class="text-2xl font-bold uppercase text-white">The Finals Weekly Cup</h3>
-                        <p class="text-zinc-400 text-sm">Competitive cashout brackets for NA and EU rosters. Open entry, streamed live, high-stakes casting.</p>
-                    </div>
-                    <div class="pt-6">
-                        <a href="https://faceit.com" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Register on FACEIT <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bento 2: Fortnite Division Recruitment -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden border-brand-purple/30">
-                    <div class="space-y-3 relative z-10">
-                        <span class="text-xs font-bold uppercase tracking-wider text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">Active Recruiting</span>
-                        <h3 class="text-2xl font-bold uppercase text-white">Fortnite Pro Roster</h3>
-                        <p class="text-zinc-400 text-sm">Chapter 7 Season 4 Duos scouting. Paid contracts, tournament entry funding, and dedicated scrim infrastructure.</p>
-                    </div>
-                    <div class="pt-6 relative z-10">
-                        <a href="https://discord.gg" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Submit Tracker Link <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bento 3: Live Broadcast -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-red-400">Stream Schedule</span>
-                        </div>
-                        <h3 class="text-2xl font-bold uppercase text-white">Monday - Friday</h3>
-                        <p class="text-zinc-400 text-sm">Live 3:00 PM – 6:30 PM EST. Ranked Unreal grind, high-level tryout VOD reviews, and tournament casting.</p>
-                    </div>
-                    <div class="pt-6">
-                        <a href="https://twitch.tv" target="_blank" class="inline-flex items-center text-xs font-bold text-purple-300 hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Watch on Twitch <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rosters Section -->
-        <section id="roster" class="space-y-8">
-            <div class="border-b border-brand-border/40 pb-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Competitive Roster</span>
-                <h2 class="text-3xl font-black tracking-wide text-white uppercase">Active Divisions</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Division: The Finals -->
-                <div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
-                            <h3 class="text-xl font-bold uppercase tracking-wider text-white">The Finals Division</h3>
-                        </div>
-                        <span class="text-xs uppercase font-mono tracking-widest text-zinc-400">NA & EMEA</span>
-                    </div>
-
-                    <div class="space-y-3 font-mono text-sm">
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">NA Core Roster</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Grand Major Series</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">EMEA Squad</span>
-                            <span class="text-xs text-zinc-400 uppercase font-sans font-semibold">LCQ Contenders</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Division: Fortnite -->
-                <div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
-                            <h3 class="text-xl font-bold uppercase tracking-wider text-white">Fortnite Division</h3>
-                        </div>
-                        <span class="text-xs uppercase font-mono tracking-widest text-brand-neon">Trial Phase</span>
-                    </div>
-
-                    <div class="space-y-3 font-mono text-sm">
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">In-Game Leader (IGL)</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Evaluating VODs</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">Fragger</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Open Tryouts</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Call to Action -->
-        <section class="glass-card rounded-3xl p-12 text-center space-y-6 border-brand-purple/30 bg-gradient-to-b from-brand-dark to-brand-black">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">Join Team Cursus</h2>
-            <p class="text-zinc-400 max-w-xl mx-auto text-base">
-                Whether competing in Weekly Cups, testing for the pro rosters, or repping the tag in the community—it starts in the server.
-            </p>
-            <div class="flex justify-center gap-4 pt-2">
-                <a href="https://discord.gg" target="_blank" class="px-8 py-3.5 rounded-xl bg-brand-purple hover:bg-brand-neon text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
-                    Connect on Discord
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-brand-border/30 glass py-8 mt-12 text-center text-zinc-500 text-xs tracking-wider uppercase">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <span>&copy; 2026 CURSUS ESPORTS. All Rights Reserved.</span>
-            <div class="flex gap-6 text-zinc-400">
-                <a href="https://twitter.com" class="hover:text-brand-neon transition-colors">Twitter / X</a>
-                <a href="https://youtube.com" class="hover:text-brand-neon transition-colors">YouTube</a>
-                <a href="https://instagram.com" class="hover:text-brand-neon transition-colors">Instagram</a>
-                <a href="https://twitch.tv" class="hover:text-brand-neon transition-colors">Twitch</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>" target="_blank" class="px-5 py-2.5 rounded-lg bg-brand-purple hover:bg-brand-neon text-black font-bold text-xs uppercase tracking-widest transition-all hover:scale-105 shadow-neon-purple flex items-center gap-2">
-                    <span>Join Discord</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main class="flex-grow max-w-7xl mx-auto px-6 w-full py-10 space-y-20">
-
-        <!-- Hero Section -->
-        <section class="relative rounded-3xl overflow-hidden border border-brand-border/40 bg-zinc-950/60 p-8 md:p-14 shadow-2xl">
-            <!-- Background Banner Ambient -->
-            <div class="absolute inset-0 -z-10 opacity-35">
-                <img src="Cursusbanner.jpg" alt="Cursus Banner" class="w-full h-full object-cover object-center filter saturate-150">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-dark/90 to-transparent -z-10"></div>
-
-            <div class="max-w-2xl space-y-6">
-                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-brand-purple/30 bg-brand-purple/10 text-brand-neon text-xs font-bold uppercase tracking-widest">
-                    <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
-                    Multi-Title Esports Org
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight text-white leading-tight">
-                    ADAPT.<br>
-                    EVOLVE.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon via-brand-accent to-purple-400 neon-text-glow">CONQUER.</span>
-                </h1>
-
-                <p class="text-zinc-300 text-base md:text-lg leading-relaxed font-normal">
-                    Dominating <span class="text-white font-semibold">The Finals</span> and invading <span class="text-white font-semibold">Fortnite Chapter 7 Season 4</span>. Built on raw mechanics, zero ego, and disciplined comms.
-                </p>
-
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#tournaments" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-purple to-brand-glow hover:from-brand-neon hover:to-brand-purple text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
-                        Weekly Cups
-                    </a>
-                    <a href="#roster" class="px-7 py-3.5 rounded-xl glass hover:bg-zinc-800/60 text-white font-bold uppercase tracking-widest text-sm border border-brand-border hover:border-brand-neon/60 transition-all">
-                        Tryouts & Rosters
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bento Grid: Modern High-Impact Hub -->
-        <section id="bento" class="space-y-6">
-            <div class="flex items-end justify-between border-b border-brand-border/40 pb-4">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Organization Hub</span>
-                    <h2 class="text-3xl font-black tracking-wide text-white uppercase">Cursus Operations</h2>
-                </div>
-                <span class="text-xs text-zinc-400 uppercase tracking-widest font-mono">Live Intel</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Bento 1: Weekly Cup Status -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold uppercase tracking-wider text-brand-neon bg-brand-purple/10 px-3 py-1 rounded-full border border-brand-purple/20">Fridays @ 5:00 PM EST</span>
-                            <span class="text-xs text-zinc-400 font-mono">FACEIT / Custom</span>
-                        </div>
-                        <h3 class="text-2xl font-bold uppercase text-white">The Finals Weekly Cup</h3>
-                        <p class="text-zinc-400 text-sm">Competitive cashout brackets for NA and EU rosters. Open entry, streamed live, high-stakes casting.</p>
-                    </div>
-                    <div class="pt-6">
-                        <a href="https://faceit.com" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Register on FACEIT <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bento 2: Fortnite Division Recruitment -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden border-brand-purple/30">
-                    <div class="space-y-3 relative z-10">
-                        <span class="text-xs font-bold uppercase tracking-wider text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">Active Recruiting</span>
-                        <h3 class="text-2xl font-bold uppercase text-white">Fortnite Pro Roster</h3>
-                        <p class="text-zinc-400 text-sm">Chapter 7 Season 4 Duos scouting. Paid contracts, tournament entry funding, and dedicated scrim infrastructure.</p>
-                    </div>
-                    <div class="pt-6 relative z-10">
-                        <a href="https://discord.gg" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Submit Tracker Link <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bento 3: Live Broadcast -->
-                <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-red-400">Stream Schedule</span>
-                        </div>
-                        <h3 class="text-2xl font-bold uppercase text-white">Monday - Friday</h3>
-                        <p class="text-zinc-400 text-sm">Live 3:00 PM – 6:30 PM EST. Ranked Unreal grind, high-level tryout VOD reviews, and tournament casting.</p>
-                    </div>
-                    <div class="pt-6">
-                        <a href="https://twitch.tv" target="_blank" class="inline-flex items-center text-xs font-bold text-purple-300 hover:text-white uppercase tracking-wider transition-colors gap-1.5">
-                            Watch on Twitch <span>&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rosters Section -->
-        <section id="roster" class="space-y-8">
-            <div class="border-b border-brand-border/40 pb-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Competitive Roster</span>
-                <h2 class="text-3xl font-black tracking-wide text-white uppercase">Active Divisions</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Division: The Finals -->
-                <div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
-                            <h3 class="text-xl font-bold uppercase tracking-wider text-white">The Finals Division</h3>
-                        </div>
-                        <span class="text-xs uppercase font-mono tracking-widest text-zinc-400">NA & EMEA</span>
-                    </div>
-
-                    <div class="space-y-3 font-mono text-sm">
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">NA Core Roster</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Grand Major Series</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">EMEA Squad</span>
-                            <span class="text-xs text-zinc-400 uppercase font-sans font-semibold">LCQ Contenders</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Division: Fortnite -->
-                <div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
-                            <h3 class="text-xl font-bold uppercase tracking-wider text-white">Fortnite Division</h3>
-                        </div>
-                        <span class="text-xs uppercase font-mono tracking-widest text-brand-neon">Trial Phase</span>
-                    </div>
-
-                    <div class="space-y-3 font-mono text-sm">
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">In-Game Leader (IGL)</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Evaluating VODs</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
-                            <span class="text-white font-bold">Fragger</span>
-                            <span class="text-xs text-brand-neon uppercase font-sans font-bold">Open Tryouts</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Call to Action -->
-        <section class="glass-card rounded-3xl p-12 text-center space-y-6 border-brand-purple/30 bg-gradient-to-b from-brand-dark to-brand-black">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">Join Team Cursus</h2>
-            <p class="text-zinc-400 max-w-xl mx-auto text-base">
-                Whether competing in Weekly Cups, testing for the pro rosters, or repping the tag in the community—it starts in the server.
-            </p>
-            <div class="flex justify-center gap-4 pt-2">
-                <a href="https://discord.gg" target="_blank" class="px-8 py-3.5 rounded-xl bg-brand-purple hover:bg-brand-neon text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
-                    Connect on Discord
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-brand-border/30 glass py-8 mt-12 text-center text-zinc-500 text-xs tracking-wider uppercase">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <span>&copy; 2026 CURSUS ESPORTS. All Rights Reserved.</span>
-            <div class="flex gap-6 text-zinc-400">
-                <a href="https://twitter.com" class="hover:text-brand-neon transition-colors">Twitter / X</a>
-                <a href="https://youtube.com" class="hover:text-brand-neon transition-colors">YouTube</a>
-                <a href="https://instagram.com" class="hover:text-brand-neon transition-colors">Instagram</a>
-                <a href="https://twitch.tv" class="hover:text-brand-neon transition-colors">Twitch</a>
-            </div>
-        </div>
-    </footer>
+<!-- Ambient Neon Background Glows -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-brand-glow/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="fixed bottom-0 right-10 w-[500px] h-[300px] bg-brand-purple/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 glass border-b border-brand-border/40">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a href="#" class="flex items-center gap-3 group">
+<img src="Cursuslogo.jpg" alt="Cursus Logo" class="w-10 h-10 rounded-lg object-cover border border-brand-purple/40 shadow-neon-purple group-hover:scale-105 transition-transform">
+<span class="heading-font text-2xl font-black tracking-widest text-white uppercase">
+CURSUS<span class="text-brand-neon">.</span>
+</span>
+</a>
+
+<!-- Modern Condensed Links -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-zinc-300">
+<a href="#about" class="hover:text-brand-neon transition-colors">The Org</a>
+<a href="#roster" class="hover:text-brand-neon transition-colors">Rosters</a>
+<a href="#tournaments" class="hover:text-brand-neon transition-colors">Tournaments</a>
+<a href="#bento" class="hover:text-brand-neon transition-colors">Hub</a>
+</nav>
+
+<!-- CTA Buttons -->
+<div class="flex items-center gap-3">
+<a href="https://discord.gg/r8qB9ygmEV" target="_blank" class="px-5 py-2.5 rounded-lg bg-brand-purple hover:bg-brand-neon text-black font-bold text-xs uppercase tracking-widest transition-all hover:scale-105 shadow-neon-purple flex items-center gap-2">
+<span>Join Discord</span>
+</a>
+</div>
+</div>
+</header>
+
+<main class="flex-grow max-w-7xl mx-auto px-6 w-full py-10 space-y-20">
+
+<!-- Hero Section -->
+<section class="relative rounded-3xl overflow-hidden border border-brand-border/40 bg-zinc-950/60 p-8 md:p-14 shadow-2xl">
+<!-- Background Banner Ambient -->
+<div class="absolute inset-0 -z-10 opacity-35">
+<img src="Cursusbanner.jpg" alt="Cursus Banner" class="w-full h-full object-cover object-center filter saturate-150">
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-dark/90 to-transparent -z-10"></div>
+
+<div class="max-w-2xl space-y-6">
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-brand-purple/30 bg-brand-purple/10 text-brand-neon text-xs font-bold uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+Multi-Title Esports Org
+</div>
+
+<h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight text-white leading-tight">
+ADAPT.<br>
+EVOLVE.<br>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon via-brand-accent to-purple-400 neon-text-glow">CONQUER.</span>
+</h1>
+
+<p class="text-zinc-300 text-base md:text-lg leading-relaxed font-normal">
+Dominating <span class="text-white font-semibold">The Finals</span> and invading <span class="text-white font-semibold">Fortnite Chapter 7</span>. Built on raw mechanics, zero ego, and disciplined comms.
+</p>
+
+<div class="flex flex-wrap gap-4 pt-4">
+<a href="#tournaments" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-purple to-brand-glow hover:from-brand-neon hover:to-brand-purple text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
+Weekly Cups
+</a>
+<a href="#roster" class="px-7 py-3.5 rounded-xl glass hover:bg-zinc-800/60 text-white font-bold uppercase tracking-widest text-sm border border-brand-border hover:border-brand-neon/60 transition-all">
+Tryouts & Rosters
+</a>
+</div>
+</div>
+</section>
+
+<!-- Bento Grid: Modern High-Impact Hub -->
+<section id="bento" class="space-y-6">
+<div class="flex items-end justify-between border-b border-brand-border/40 pb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Organization Hub</span>
+<h2 class="text-3xl font-black tracking-wide text-white uppercase">Cursus Operations</h2>
+</div>
+<span class="text-xs text-zinc-400 uppercase tracking-widest font-mono">Live Intel</span>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bento 1: Weekly Cup Status -->
+<div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-neon bg-brand-purple/10 px-3 py-1 rounded-full border border-brand-purple/20">Fridays @ 5:00 PM EST</span>
+<span class="text-xs text-zinc-400 font-mono">EsportBot / Custom</span>
+</div>
+<h3 class="text-2xl font-bold uppercase text-white">The Finals Weekly Cup</h3>
+<p class="text-zinc-400 text-sm">Competitive cashout brackets for NA and EU rosters. Open entry, streamed live, high-stakes casting.</p>
+</div>
+<div class="pt-6">
+<a href="https://discord.com/r8qB9ygmEV" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
+Register on Discord <span>&rarr;</span>
+</a>
+</div>
+</div>
+
+<!-- Bento 2: Fortnite Division Recruitment -->
+<div class="glass-card rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden border-brand-purple/30">
+<div class="space-y-3 relative z-10">
+<span class="text-xs font-bold uppercase tracking-wider text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">Active Recruiting</span>
+<h3 class="text-2xl font-bold uppercase text-white">Fortnite Pro Roster</h3>
+<p class="text-zinc-400 text-sm">Chapter 7 scouting. Paid contracts, tournament entry funding, and dedicated scrim infrastructure.</p>
+</div>
+<div class="pt-6 relative z-10">
+<a href="https://discord.gg/r8qB9ygmEV" target="_blank" class="inline-flex items-center text-xs font-bold text-brand-neon hover:text-white uppercase tracking-wider transition-colors gap-1.5">
+Submit Tracker Link <span>&rarr;</span>
+</a>
+</div>
+</div>
+
+<!-- Bento 3: Live Broadcast -->
+<div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-red-400">Stream Schedule</span>
+</div>
+<h3 class="text-2xl font-bold uppercase text-white">Monday - Friday</h3>
+<p class="text-zinc-400 text-sm">Live 3:00 PM – 6:30 PM EST. Ranked Unreal grind, high-level tryout VOD reviews, and tournament casting.</p>
+</div>
+<div class="pt-6">
+<a href="https://twitch.tv/rmghahaha" target="_blank" class="inline-flex items-center text-xs font-bold text-purple-300 hover:text-white uppercase tracking-wider transition-colors gap-1.5">
+Watch on Twitch <span>&rarr;</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Rosters Section -->
+<section id="roster" class="space-y-8">
+<div class="border-b border-brand-border/40 pb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-brand-neon">Competitive Roster</span>
+<h2 class="text-3xl font-black tracking-wide text-white uppercase">Active Divisions</h2>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Division: The Finals -->
+<div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
+<h3 class="text-xl font-bold uppercase tracking-wider text-white">The Finals Division</h3>
+</div>
+<span class="text-xs uppercase font-mono tracking-widest text-zinc-400">NA & EMEA</span>
+</div>
+
+<div class="space-y-3 font-mono text-sm">
+<div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
+<span class="text-white font-bold">NA Core Roster</span>
+<span class="text-xs text-brand-neon uppercase font-sans font-bold">The Finals Americas LCQ (Grand Major)<br>September 12th</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
+<span class="text-white font-bold">EMEA Squad</span>
+<span class="text-xs text-zinc-400 uppercase font-sans font-semibold">The Finals Americas LCQ (Grand Major)<br>September 19th</span>
+</div>
+</div>
+</div>
+
+<!-- Division: Fortnite -->
+<div class="glass-card rounded-2xl p-8 border border-brand-purple/20 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-brand-neon shadow-neon-purple"></div>
+<h3 class="text-xl font-bold uppercase tracking-wider text-white">Fortnite Division</h3>
+</div>
+<span class="text-xs uppercase font-mono tracking-widest text-brand-neon">Trial Phase</span>
+</div>
+
+<div class="space-y-3 font-mono text-sm">
+<div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
+<span class="text-white font-bold">Captain</span>
+<span class="text-xs text-brand-neon uppercase font-sans font-bold">Evaluating Interviews</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-zinc-900/60 border border-zinc-800">
+<span class="text-white font-bold">Fragger</span>
+<span class="text-xs text-brand-neon uppercase font-sans font-bold">Open Tryouts</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Final Call to Action -->
+<section class="glass-card rounded-3xl p-12 text-center space-y-6 border-brand-purple/30 bg-gradient-to-b from-brand-dark to-brand-black">
+<h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">Join Team Cursus</h2>
+<p class="text-zinc-400 max-w-xl mx-auto text-base">
+Whether competing in Weekly Cups, testing for the pro rosters, or repping the tag in the community—it starts in the server.
+</p>
+<div class="flex justify-center gap-4 pt-2">
+<a href="https://discord.gg/r8qB9ygmEV" target="_blank" class="px-8 py-3.5 rounded-xl bg-brand-purple hover:bg-brand-neon text-black font-extrabold uppercase tracking-widest text-sm shadow-neon-purple transition-all hover:scale-105">
+Connect on Discord
+</a>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-brand-border/30 glass py-8 mt-12 text-center text-zinc-500 text-xs tracking-wider uppercase">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<span>&copy; 2026 CURSUS ESPORTS. All Rights Reserved.</span>
+<div class="flex gap-6 text-zinc-400">
+<a href="https://twitter.com/rmghaha" class="hover:text-brand-neon transition-colors">Twitter / X</a>
+<a href="https://youtube.com/@rmglol" class="hover:text-brand-neon transition-colors">YouTube</a>
+<a href="https://instagram.com/rmghaha" class="hover:text-brand-neon transition-colors">Instagram</a>
+<a href="https://twitch.tv/rmghahaha" class="hover:text-brand-neon transition-colors">Twitch</a>
+</div>
+</div>
+</footer>
 
 </body>
 </html>
+
